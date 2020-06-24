@@ -1,0 +1,24 @@
+{
+  "name": "@becode/js-intro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx seve -e '*.json,*.md,node_modules,_shared' -p 8000 -i .",
+    "api": "npx json-server ./_shared/api.json"
+  },
+  "dependencies": {
+    "json-server": "^0.16.1"
+  },
+  "devDependencies": {
+    "@becode/eslint-config": "^0.10.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-unicorn": "^20.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "seve": "^0.8.0"
+  }
+}
