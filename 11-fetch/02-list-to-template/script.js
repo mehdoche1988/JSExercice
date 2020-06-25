@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    async function charlesxavier() {
+
+        let api = await fetch("http://localhost:3000/heroes");
+        charlesxavier = await api.json();
+
+        charlesxavier.forEach(element => {
+            document.getElementById("target").innerHTML +=
+
+                `<li class="hero">
+                    <h4 class="title">
+                        <strong class="name">${element.name}</strong>
+                        <em class="alter-ego">${element.alterEgo}</em>
+                    </h4>
+                    <p class="powers">${element.abilities}</p>
+                </li>`
+        });
+    }
+    document.getElementById("run").addEventListener("click", () => {
+
+        charlesxavier();
+
+    })
+
 })();
